@@ -24,10 +24,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "To Do",
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        body: ToDoScreen(),
-      ),
+      theme: ThemeData(primarySwatch: Colors.yellow),
+      home: ToDoScreen(),
     );
   }
 }
