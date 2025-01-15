@@ -13,6 +13,7 @@ class _CounterPageState extends State<CounterPage> {
 
   // Method to increment counter value
   void _incrementCounterValue() {
+    // set state rebuilds widget
     setState(() {
       _counterValue++;
     });
@@ -21,6 +22,21 @@ class _CounterPageState extends State<CounterPage> {
   // UI
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "You pushed the button $_counterValue times.",
+              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+            ),
+            ElevatedButton(
+                onPressed: _incrementCounterValue, child: Text("Increment"))
+          ],
+        ),
+      ),
+    );
   }
 }
