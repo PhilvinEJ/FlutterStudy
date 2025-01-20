@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_app/Components/to_do_tile.dart';
 
 class ToDoScreen extends StatefulWidget {
   const ToDoScreen({super.key});
@@ -12,10 +13,14 @@ class _ToDoScreenState extends State<ToDoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Center(child: Text("TO DO")),
         backgroundColor: Colors.yellow,
-        elevation: 8.0,
+        elevation: 0,
       ),
       backgroundColor: Colors.yellow[200],
+      body: ListView(
+        children: [ToDoTile()],
+      ),
     );
   }
 }
